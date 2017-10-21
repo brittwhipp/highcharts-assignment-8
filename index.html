@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Greenhouse Gas Emissions Among 3 World Powers </title>
+
+<link rel="stylesheet" href="styles/whipple.css">
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+</head>
+<body>
+    <div id="wrapper">
+
+  <h1>Greenhouse Gas Emissions Among 3 World Powers</h1>
+  
+      <p> By: Brittney Whipple </p>
+
+  <div id="container"></div>
+  <p> The data above is from <a href="http://data.un.org/Data.aspx?q=CO2&d=GHG&f=seriesID%3aCO2" target="_blank">UN Data</a>. </p>
+
+  <p> Greenhouse gas emissions are gases that trap heat in the atmosphere. These emissions are a combination of carbon dioxide, methane, nitrous oxide and fluorinated gases. However, the two main components of greenhouse gases are carbon dioxide and methane gases. For more information about greenhouse gases visit the <a href="https://www.epa.gov/ghgemissions" target="_blank">EPA website</a>. The following three world powers; European Union, Russian Federation, and United States of America have significantly contributed to the greenhouse gas emissions in our atmosphere, which results in climate change. </p>
+
+<script>
+Highcharts.chart('container', {
+
+  title: {
+    text: 'Carbon Dioxide Emissions'
+  },
+
+  subtitle: {
+    text: 'Source: United Nations Framework Convention on Climate Change'
+  },
+
+  yAxis: {
+    title: {
+      text: 'Kilotonnes of CO2 Equivalent'
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+  },
+
+  plotOptions: {
+    series: {
+      label: {
+        connectorAllowed: false
+      },
+      pointStart: 2004
+    }
+  },
+
+  series: [{
+    name: 'European Union',
+    data: [4314561, 4290587, 4297988, 4244213, 4149624, 3814305, 3933291, 3789764, 3728965, 3646390, 3463398]
+  }, {
+    name: 'Russion Federation',
+    data: [1575181, 1593933, 1653289, 1653139, 1685000, 1576704, 1662592, 1717222, 1727489, 1666644, 1671569]
+  }, {
+    name: 'United States of America',
+    data: [6096978, 6122747, 6042394, 6121654, 5923201, 5488320, 5688756, 5559508, 5349221, 5502551, 5556007]
+  }],
+
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 500
+      },
+      chartOptions: {
+        legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom'
+        }
+      }
+    }]
+  }
+
+});
+</script>
+
+
+<div id="container2"></div>
+  <p> The data above is from <a href="http://data.un.org/Data.aspx?q=emissions&d=GHG&f=seriesID%3aCH4" target="_blank">UN Data</a>. </p>
+
+  <p> For the past 150 years, human activities have been responsible for almost all of the increases in greenhouse gases. The primary sources are transportation, electricity production, agriculture, industry, commercial and residential. Since 1900 the global carbon emissions from fossil fuels have significantly increased. To find out how much you contribute to the greenhouse gas problem, visit the EPA's <a href= "https://www3.epa.gov/carbon-footprint-calculator/" target="_blank">carbon footprint calculator</a>. </p>
+
+<script>
+Highcharts.chart('container2', {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: 'Methane Gas Emissions'
+  },
+  subtitle: {
+    text: 'Source: United Nations Framework Convention on Climate Change'
+  },
+  xAxis: {
+    categories: [
+      '2004',
+      '2005',
+      '2006',
+      '2007',
+      '2008',
+      '2009',
+      '2010',
+      '2011',
+      '2012',
+      '2013',
+      '2014'
+    ],
+    crosshair: true
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'CH4 Emissions in Kilotonne CO2 Equivalent'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} kt</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [{
+    name: 'European Union',
+    data: [555673, 543442, 531708, 520924, 510422, 495013, 484705, 474491, 469809, 458526, 452696]
+
+  }, {
+    name: 'Russian Federation',
+    data: [777316, 790312, 806183, 817695, 819537, 799070, 827300, 842544, 852552, 856648, 859101]
+
+  }, {
+    name: 'United States of America',
+    data: [704887, 717356, 719581, 725975, 738890, 735359, 722411, 717424, 714401, 721475, 730829]
+
+  }]
+});
+</script>
+
+</div>
+
+</body>
+</html>
